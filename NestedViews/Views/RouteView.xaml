@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+  xmlns="http://xamarin.com/schemas/2014/forms"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:controls="clr-namespace:NestedViews.Views;assembly=NestedViews"
+  xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+  x:Class="NestedViews.Views.RouteView">
+  <ContentPage.Content>
+    <StackLayout>
+      <controls:PlaceView
+        BindingContext="{Binding StartingPlace}" />
+
+      <controls:PlaceView
+        BindingContext="{Binding TargetPlace}" />
+
+      <Label
+        Text="Contents Starting Place" />
+
+      <StackLayout
+        Orientation="Horizontal">
+        <Label
+          Text="Street" />
+
+        <Label
+          Text="{Binding StartingPlace.Street}" />
+
+      </StackLayout>
+
+      <StackLayout
+        Orientation="Horizontal">
+        <Label
+          Text="City" />
+
+        <Label
+          Text="{Binding StartingPlace.City}" />
+
+      </StackLayout>
+
+      <Label
+        Text="Contents Target Place" />
+
+      <StackLayout
+        Orientation="Horizontal">
+        <Label
+          Text="Street" />
+
+        <Label
+          Text="{Binding TargetPlace.Street}" />
+
+      </StackLayout>
+
+      <StackLayout
+        Orientation="Horizontal">
+        <Label
+          Text="City" />
+
+        <Label
+          Text="{Binding TargetPlace.City}" />
+
+      </StackLayout>
+
+    </StackLayout>
+
+  </ContentPage.Content>
+
+</ContentPage>
